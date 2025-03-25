@@ -128,7 +128,7 @@ class FoldyGrid:
     def __init__(self, grid_string, output_file=sys.stdout):
         """Return a FoldyGrid formed from the code grid_string."""
         # Raise an error if unknown characters are in the code
-        foldy_characters = r' 0123456789-*:<>^v/\|_$?{}!.;,@&~[]#'
+        foldy_characters = r' 0123456789+-*:<>^v/\|_$?{}!.;,@&~[]#'
         if (unknown_chars := set(grid_string) - set(foldy_characters)):
             error_text  = 'Unknown character'
             error_text += 's' if len(unknown_chars) > 1 else ''
